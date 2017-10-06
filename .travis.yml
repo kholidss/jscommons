@@ -5,9 +5,6 @@ node_js: node
 cache:
   - yarn: true
 
-env:
-  - MONGODB=3.2.13
-
 before_install:
   - npm install -g greenkeeper-lockfile@1
 
