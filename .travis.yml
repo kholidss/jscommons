@@ -8,9 +8,6 @@ env:
 before_install:
   - npm install -g greenkeeper-lockfile@1
 
-install:
-  - if [ "$PACKAGE_MANAGER" == "npm" ]; then npm install; else yarn; fi
-
 before_script:
   - greenkeeper-lockfile-update
   - npm prune
