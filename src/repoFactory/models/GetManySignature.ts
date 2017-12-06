@@ -1,9 +1,9 @@
+import Cursor from '../../utils/Cursor';
+import Match from '../../utils/Match';
 import Member from '../../utils/Member';
 import Model from '../../utils/Model';
-import Cursor from './Cursor';
-import Match from './Match';
-import Pagination from './Pagination';
-import Sort from './Sort';
+import Pagination from '../../utils/Pagination';
+import Sort from '../../utils/Sort';
 
 export interface Opts<R> {
   readonly match: Match<R>;

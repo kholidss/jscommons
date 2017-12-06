@@ -1,11 +1,13 @@
 import { first } from 'lodash';
-import Cursor from '../../../repoFactory/models/Cursor';
+import Cursor from '../../../utils/Cursor';
 import Model from '../../../utils/Model';
+import Sort from '../../../utils/Sort';
+import getCursorFromModel from './getCursorFromModel';
 
-export default <R>(models: Model<R>[]): Cursor => {
-  const firstModel = first(models);
-  if (firstModel === undefined) {
+export default <R>(models: Model<R>[], sort: Sort<R>): Cursor => {
+  const model = first(models);
+  if (model === undefined) {
     return undefined;
   }
-  return firstModel.id;
+  return getCursorFromModel(model, sort);
 };

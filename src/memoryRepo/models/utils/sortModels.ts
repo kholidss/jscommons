@@ -1,6 +1,6 @@
 import { orderBy } from 'lodash';
-import Sort from '../../../repoFactory/models/Sort';
 import Model from '../../../utils/Model';
+import Sort from '../../../utils/Sort';
 
 export default <R>(models: Model<R>[], sort: Sort<R>): Model<R>[] => {
   const sortKeys = Object.keys(sort);

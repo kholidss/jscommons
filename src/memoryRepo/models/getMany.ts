@@ -11,9 +11,9 @@ export default <R>({ getModels }: Config<R>) => {
     const storedModels = getModels();
     const matchedModels = matchModels(storedModels, match);
     const sortedModels = sortModels(matchedModels, sort);
-    const models = paginateModels(sortedModels, pagination);
-    const forwardCursor = getForwardCursor(models);
-    const backwardCursor = getBackwardCursor(models);
+    const models = paginateModels(sortedModels, pagination, sort);
+    const forwardCursor = getForwardCursor(models, sort);
+    const backwardCursor = getBackwardCursor(models, sort);
     return { models, forwardCursor, backwardCursor };
   };
 };

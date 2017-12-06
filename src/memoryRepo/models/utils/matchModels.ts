@@ -1,5 +1,5 @@
 import { isMatch } from 'lodash';
-import Match from '../../../repoFactory/models/Match';
+import Match from '../../../utils/Match';
 import Model from '../../../utils/Model';
 
 export default <R>(models: Model<R>[], match: Match<R>): Model<R>[] => {

@@ -1,5 +1,5 @@
+import Match from '../../utils/Match';
 import Member from '../../utils/Member';
-import Match from './Match';
 
 export interface Opts<R> {
   readonly match: Match<R>;
