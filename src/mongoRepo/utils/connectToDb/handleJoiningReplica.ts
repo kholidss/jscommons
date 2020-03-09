@@ -1,5 +1,4 @@
-import Config from './Config';
-
-export default (config: Config) => (role: string, server: any) => {
-  config.logger.info(`A ${role} server joined the replica set`, server.me);
+export default (role: string, server: any) => {
+  // tslint:disable-next-line:no-console
+  console.log(`A ${role} server joined the replica set`, server.me);
 };

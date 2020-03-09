@@ -9,12 +9,14 @@ export default async (config: Config, retries = 0): Promise<Connection> => {
   try {
     const client = await MongoClient.connect(config.url);
     const db = client.db(config.dbName);
-    config.logger.info(`Created new Mongo connection`);
+    // tslint:disable-next-line:no-console
+    console.log(`Created new Mongo connection`);
     (db as any).s.topology.once('left', handleLeavingReplica(config));
-    (db as any).s.topology.once('joined', handleJoiningReplica(config));
+    (db as any).s.topology.once('joined', handleJoiningReplica);
     return { client, db };
   } catch (err) {
-    config.logger.error(`Failed Mongo connection: ${err.message}`);
+    // tslint:disable-next-line:no-console
+    console.error(`Failed Mongo connection: ${err.message}`);
     return retryConnection(config, retries + 1);
   }
 };

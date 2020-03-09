@@ -7,7 +7,7 @@ export default async (
   config: Config,
   existingConnection?: Promise<Connection>,
 ): Promise<Connection> => {
-  const isConnected = await hasConnection(config, existingConnection);
+  const isConnected = await hasConnection(config.dbName, existingConnection);
   if (!isConnected) {
     return createConnection(config);
   }
