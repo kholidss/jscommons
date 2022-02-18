@@ -1,0 +1,1 @@
+{"version":3,"file":"getDbFromUrl.js","sourceRoot":"","sources":["../../../src/mongoRepo/utils/getDbFromUrl.ts"],"names":[],"mappings":";;AAAA,2CAA2C;AAC3C,IAAM,KAAK,GAAG,yFAAyF,CAAC;AAExG,mBAAe,UAAC,GAAW;IACzB,IAAM,MAAM,GAAG,KAAK,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;IAC/B,IAAI,MAAM,KAAK,IAAI,EAAE;QACnB,OAAO,SAAS,CAAC;KAClB;IACD,OAAO,MAAM,CAAC,CAAC,CAAC,CAAC;AACnB,CAAC,EAAC"}
