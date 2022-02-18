@@ -1,5 +1,5 @@
 import Config from './Config';
 
-export default (config: Config) => (role: string, server: any) => {
-  config.logger.info(`A ${role} server joined the replica set`, server.me);
+export default (config: any) => (role: string, server: any) => {
+  console.log(`A ${role} server joined the replica set`, server.me, config);
 };

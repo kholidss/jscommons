@@ -1,18 +1,18 @@
-import { LoggerInstance } from 'winston';
+// import { LoggerInstance } from 'winston';
 
-export default (logger: LoggerInstance) => {
+export default (_logger: any) => {
   const handleExit = (event: string) => {
     return (error?: any) => {
       if (error !== undefined) {
-        logger.error(error.stack);
+        console.log(error.stack);
       }
-      logger.info(event);
+      console.log(event);
       process.exit();
     };
   };
 
   if (process.send !== undefined) {
-    logger.info('Process ready');
+    console.log('Process ready');
     process.send('ready');
   }
 

@@ -19,7 +19,7 @@ export interface Options {
 export default ({ config, errorId, res, err }: Options): Response => {
   const { translator, logger } = config;
   const logError = (msg: string, meta?: any) => {
-    logger.error(`${errorId}: jscommons handled - ${msg}`, meta);
+    console.log(`${errorId}: jscommons handled - ${msg}`, meta);
   };
   if (err instanceof InvalidAuth) {
     const code = 400;

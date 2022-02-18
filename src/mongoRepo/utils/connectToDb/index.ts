@@ -1,5 +1,5 @@
 import { Db } from 'mongodb';
-import { LoggerInstance } from 'winston';
+// import { LoggerInstance } from 'winston';
 import Config from './Config';
 import Connection from './Connection';
 import getConnection from './getConnection';
@@ -7,7 +7,7 @@ import getConnection from './getConnection';
 export interface Opts {
   readonly maxRetries?: number;
   readonly retryGapMS?: number;
-  readonly logger: LoggerInstance;
+  readonly logger: any;
   readonly url: string;
   readonly dbName: string;
 }
@@ -32,7 +32,7 @@ export default ({
     return (await connection).db;
   };
   connectToDb().catch((err) => {
-    logger.error(`Failed initial mongo connection: ${err.message}`);
+    console.log(`Failed initial mongo connection: ${err.message}`);
   });
   return connectToDb;
 };

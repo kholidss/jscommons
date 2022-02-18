@@ -1,7 +1,7 @@
-import * as S3 from 'aws-sdk/clients/s3';
+// import * as S3 from 'aws-sdk/clients/s3';
 
 interface Config {
-  readonly client: S3;
+  readonly client: any;
   readonly bucketName: string;
   readonly subFolder: string;
 }

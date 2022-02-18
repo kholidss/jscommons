@@ -1,4 +1,4 @@
-import * as S3 from 'aws-sdk/clients/s3';
+// import * as S3 from 'aws-sdk/clients/s3';
 import Config from './Config';
 
 export default (config: Config) => {
@@ -9,14 +9,14 @@ export default (config: Config) => {
       Prefix: config.subFolder,
     }).promise();
     const objects = listObjectsOutput.Contents !== undefined ? listObjectsOutput.Contents : [];
-    const identifierList: S3.ObjectIdentifierList = objects.reduce(
-      (identifiers, { Key }) => {
+    const identifierList: any = objects.reduce(
+      (identifiers: any, { Key }: any) => {
         if (Key !== undefined) {
           return [...identifiers, { Key }];
         }
         return identifiers;
       },
-      [] as S3.ObjectIdentifierList,
+      [] as any,
     );
 
     // Deletes the objects.
