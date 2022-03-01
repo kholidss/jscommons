@@ -60,7 +60,7 @@
     "@types/knex": "0.15.2",
     "@types/lodash": "4.14.141",
     "@types/mocha": "2.2.48",
-    "@types/mongodb": "3.0.18",
+    "@types/mongodb": "3.6.18",
     "@types/morgan": "1.7.37",
     "@types/uuid": "3.4.5",
     "@types/winston": "2.4.4",

@@ -7,7 +7,7 @@ import retryConnection from './retryConnection';
 
 export default async (config: Config, retries = 0): Promise<Connection> => {
   try {
-    const client = await MongoClient.connect(config.url);
+    const client = await MongoClient.connect(config.url, {tlsAllowInvalidCertificates: true});
     const db = client.db(config.dbName);
     console.log(`Created new Mongo connection`);
     (db as any).s.topology.once('left', handleLeavingReplica(config));
