@@ -48,6 +48,7 @@ exports.default = (function (config, retries) {
             switch (_a.label) {
                 case 0:
                     _a.trys.push([0, 2, , 3]);
+                    console.log("Creating Mongo connection ...");
                     return [4 /*yield*/, mongodb_1.MongoClient.connect(config.url, { tlsAllowInvalidCertificates: true })];
                 case 1:
                     client = _a.sent();
